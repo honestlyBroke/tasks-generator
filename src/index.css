@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://unpkg.com/nes.css@2.3.0/css/nes.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  background-color: #e8e8e8;
+  color: #212529;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  zoom: 1.25;
+  transform-origin: top center;
+}
+
+.app-wrapper {
+  width: 100%;
+}
+
+/* Consistent font sizing for all form inputs */
+.nes-textarea,
+.nes-input,
+.nes-select select,
+.nes-select select option,
+input,
+textarea,
+select {
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 0.7rem !important;
+  line-height: 1.6;
+}
+
+.nes-textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.nes-input {
+  width: 100%;
+}
+
+.nes-container {
+  word-break: break-word;
+}
+
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #333;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+
+  #root {
+    padding: 0.75rem;
+  }
+
+  .nes-container {
+    padding: 0.75rem;
+  }
+}

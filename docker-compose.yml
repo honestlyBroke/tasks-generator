@@ -1,18 +1,27 @@
-version: '3.8'
-
 services:
   app:
     build: .
-    container_name: tasks-generator
-    ports:
-      - "3001:3001"
-    environment:
-      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      - OLLAMA_URL=http://host.docker.internal:11434
-      - PORT=3001
+    hostname: task-generator
+    env_file:
+      - .env
     volumes:
-      - tasks-data:/app/data
+      - ./data:/app/data
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+    tty: true
 
 volumes:
-  tasks-data:
+  ollama: {}
+
+networks:
+  default:
+    external: true
+    name: nginx-network

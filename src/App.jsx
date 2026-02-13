@@ -154,14 +154,14 @@ function App() {
             <SpecForm onGenerate={handleGenerate} loading={loading} />
 
             {loading && (
-              <div className="nes-container is-rounded" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+              <div className="nes-container" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
                 <p style={{ fontSize: '0.8rem', margin: '0.5rem 0' }}>Generating with AI...</p>
                 <progress className="nes-progress is-primary" style={{ width: '100%' }} />
               </div>
             )}
 
             {error && (
-              <div className="nes-container is-rounded" style={{ marginBottom: '1.5rem', padding: '0.75rem', background: '#f8d7da', textAlign: 'center' }}>
+              <div className="nes-container" style={{ marginBottom: '1.5rem', padding: '0.75rem', background: '#f8d7da', textAlign: 'center' }}>
                 <p className="nes-text is-error" style={{ fontSize: '0.7rem', margin: 0 }}>
                   {error}
                 </p>
@@ -170,7 +170,7 @@ function App() {
 
             {spec && !loading && (
               <>
-                <div className="nes-container is-rounded" style={{ marginBottom: '1.5rem', padding: '0.75rem', background: '#d4edda', textAlign: 'center' }}>
+                <div className="nes-container" style={{ marginBottom: '1.5rem', padding: '0.75rem', background: '#d4edda', textAlign: 'center' }}>
                   <p className="nes-text is-success" style={{ fontSize: '0.75rem', margin: 0 }}>
                     {spec.title}
                     {spec.source === 'llm' && ' (AI-generated)'}

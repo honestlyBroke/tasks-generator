@@ -53,7 +53,7 @@ export default function SpecForm({ onGenerate, loading }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem' }}>
+      <section className="nes-container with-title" style={{ marginBottom: '1.5rem' }}>
         <p className="title">Feature Idea</p>
 
         {/* Model selector */}

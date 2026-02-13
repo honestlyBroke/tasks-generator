@@ -18,7 +18,7 @@ export default function RiskSection({ spec, onUpdateSpec }) {
   };
 
   return (
-    <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem', borderColor: '#e76e55' }}>
+    <section className="nes-container with-title" style={{ marginBottom: '1.5rem', borderColor: '#e76e55' }}>
       <p className="title">Risks & Unknowns</p>
       {spec.risks.length === 0 ? (
         <p className="nes-text is-disabled" style={{ fontSize: '0.75rem' }}>No risks identified.</p>
@@ -43,7 +43,7 @@ function RiskItem({ risk, onEdit, onRemove }) {
 
   if (editing) {
     return (
-      <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.75rem' }}>
+      <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.75rem' }}>
         <label style={{ fontSize: '0.65rem', display: 'block', marginBottom: '0.25rem' }}>Risk</label>
         <textarea
           className="nes-textarea"
@@ -69,7 +69,7 @@ function RiskItem({ risk, onEdit, onRemove }) {
   }
 
   return (
-    <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem' }}>
+    <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <p style={{ fontSize: '0.7rem', margin: '0 0 0.25rem', color: '#e76e55' }}>

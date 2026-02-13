@@ -28,7 +28,7 @@ function TaskItem({ task, index, total, onEdit, onMove, onRemove }) {
 
   if (editing) {
     return (
-      <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.75rem' }}>
+      <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.75rem' }}>
         <input
           className="nes-input"
           value={editTitle}
@@ -51,7 +51,7 @@ function TaskItem({ task, index, total, onEdit, onMove, onRemove }) {
   }
 
   return (
-    <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem' }}>
+    <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.25rem' }}>
@@ -130,7 +130,7 @@ export default function TaskList({ spec, onUpdateSpec }) {
   return (
     <div>
       {/* User Stories */}
-      <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem' }}>
+      <section className="nes-container with-title" style={{ marginBottom: '1.5rem' }}>
         <p className="title">User Stories ({spec.userStories.length})</p>
         {spec.userStories.map((us) => (
           <UserStoryItem
@@ -143,7 +143,7 @@ export default function TaskList({ spec, onUpdateSpec }) {
       </section>
 
       {/* Tasks */}
-      <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem' }}>
+      <section className="nes-container with-title" style={{ marginBottom: '1.5rem' }}>
         <p className="title">Engineering Tasks ({spec.tasks.length})</p>
 
         <div style={{ marginBottom: '1rem' }}>
@@ -204,7 +204,7 @@ function UserStoryItem({ story, onEdit, onRemove }) {
 
   if (editing) {
     return (
-      <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.5rem' }}>
+      <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.5rem' }}>
         <textarea
           className="nes-textarea"
           rows={2}
@@ -221,7 +221,7 @@ function UserStoryItem({ story, onEdit, onRemove }) {
   }
 
   return (
-    <div className="nes-container is-rounded" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+    <div className="nes-container" style={{ marginBottom: '0.5rem', padding: '0.5rem 0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
       <div style={{ flex: 1, minWidth: 0 }}>
         <span className="nes-badge" style={{ marginRight: '0.5rem' }}>
           <span className={ps.className} style={{ fontSize: '0.5rem' }}>{ps.label}</span>

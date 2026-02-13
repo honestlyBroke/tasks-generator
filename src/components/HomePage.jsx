@@ -1,7 +1,7 @@
 export default function HomePage({ onGetStarted }) {
   return (
     <div>
-      <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem' }}>
+      <section className="nes-container with-title" style={{ marginBottom: '1.5rem' }}>
         <p className="title">How It Works</p>
         <div style={{ fontSize: '0.75rem', lineHeight: '2' }}>
           <p>
@@ -27,7 +27,7 @@ export default function HomePage({ onGetStarted }) {
         </div>
       </section>
 
-      <section className="nes-container is-rounded" style={{ marginBottom: '1.5rem' }}>
+      <section className="nes-container" style={{ marginBottom: '1.5rem' }}>
         <h3 style={{ fontSize: '0.85rem', marginTop: 0 }}>Features</h3>
         <ul className="nes-list is-disc" style={{ fontSize: '0.7rem', lineHeight: '2.2' }}>
           <li>4 project templates with tailored tasks and risks</li>

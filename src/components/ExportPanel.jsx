@@ -39,7 +39,7 @@ export default function ExportPanel({ spec }) {
   };
 
   return (
-    <section className="nes-container with-title is-rounded" style={{ marginBottom: '1.5rem' }}>
+    <section className="nes-container with-title" style={{ marginBottom: '1.5rem' }}>
       <p className="title">Export</p>
       <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
         <button className={`nes-btn ${copied ? 'is-success' : 'is-primary'}`} onClick={handleCopy} style={{ fontSize: '0.75rem' }}>

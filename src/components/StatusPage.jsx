@@ -4,7 +4,7 @@ function StatusItem({ label, status, detail }) {
   const colorClass = status === 'ok' ? 'is-success' : status === 'warn' ? 'is-warning' : 'is-error';
 
   return (
-    <div className="nes-container is-rounded" style={{ marginBottom: '0.75rem', padding: '0.75rem' }}>
+    <div className="nes-container" style={{ marginBottom: '0.75rem', padding: '0.75rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>{label}</span>
@@ -70,7 +70,7 @@ export default function StatusPage({ apiBase }) {
   }, [apiBase]);
 
   return (
-    <section className="nes-container with-title is-rounded">
+    <section className="nes-container with-title">
       <p className="title">System Status</p>
 
       <StatusItem label="Frontend" status={checks.frontend.status} detail={checks.frontend.detail} />

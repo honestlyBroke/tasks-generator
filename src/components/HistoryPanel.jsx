@@ -1,7 +1,7 @@
 export default function HistoryPanel({ history, onLoadSpec }) {
   if (history.length === 0) {
     return (
-      <section className="nes-container with-title is-rounded">
+      <section className="nes-container with-title">
         <p className="title">Recent Specs</p>
         <p className="nes-text is-disabled" style={{ fontSize: '0.85rem' }}>
           No specs generated yet. Fill out the form and generate one!
@@ -11,7 +11,7 @@ export default function HistoryPanel({ history, onLoadSpec }) {
   }
 
   return (
-    <section className="nes-container with-title is-rounded">
+    <section className="nes-container with-title">
       <p className="title">Recent Specs</p>
       {history.map((spec, i) => {
         const date = new Date(spec.createdAt);
@@ -21,7 +21,7 @@ export default function HistoryPanel({ history, onLoadSpec }) {
         return (
           <div
             key={spec.createdAt}
-            className="nes-container is-rounded"
+            className="nes-container"
             style={{ marginBottom: '0.75rem', padding: '0.75rem', cursor: 'pointer' }}
             onClick={() => onLoadSpec(spec)}
           >
